@@ -1,0 +1,187 @@
+/* 
+
+OpenCart 1.5.6.4 Account pages 
+template: default
+tested with Bootstrap 3
+
+by Kirill Korolev 
+voxweblab.com
+2022.04.12 (Юра, прости, мы всё просрали)
+
+*/
+/* ACCOUNT PAGES ********************************************************************************************************************************* */
+.account-buttons {margin:50px auto 0px auto;padding:0px;}
+.account-buttons a i + span {margin-left:10px;}
+
+/* ADDRESS */
+.account-address {width:100%;margin-bottom:25px;}
+.account-address-box {width:100%;margin-bottom:10px;}
+.account-address-box div {font-style:italic;}
+.account-address-box div span {display:inline-block;min-width:65px;margin-right:10px;font-weight:500;font-style:normal;}
+.account-address-action {}
+.account-address-action a {}
+.account-address-action a:hover {}
+.account-address-action a + a {margin-left:10px;}
+.account-address-action a i + span {margin-left:10px;}
+.account-address-action a.btn-edit {}
+.account-address-action a.btn-delete {padding:5px 10px;background:#e00;}
+.account-address-action a.btn-delete:hover {background:#444;}
+/* end of Address */
+
+/* Order List */
+.order-list {width:100%;margin-bottom:25px;clear:both;}
+.order-id {}
+.order-status {}
+.order-info {margin-bottom:10px;}
+.order-action {}
+.order-action a + a {margin-left:10px;}
+.order-action a i + span {margin-left:10px;}
+/* end of Order List */
+
+/* ORDER INFO */
+.order-header {width:100%;margin-bottom:25px;}
+.order-details {}
+.order-methods {}
+.order-address {width:100%;margin-bottom:25px;}
+.order-payment-address {display:none;}
+.order-shipping-address {}
+.order-shipping-address div {}
+.order-shipping-address div span {font-weight:700;}
+.order-products {width:100%;margin-bottom:25px;}
+#order-products-header 	{width:100%;margin-bottom:25px;padding:0px;}
+#order-products-legend 	{width:100%;display:flex;justify-content:flex-start;align-items:center;background:rgba(0,167,146,1);color:#fff;}
+#order-products-legend > div {text-align:center;}
+.order-products-list 	{width:100%;display:flex;justify-content:flex-start;align-items:center;}
+.order-products-list:nth-of-type(2n) {background:rgba(0,167,146,0.1);}
+.order-products-voucher {border-bottom:1px solid rgba(0,167,146,0.2);}
+.order-products-total 	{width:100%;display:flex;justify-content:flex-start;align-items:center;}
+.order-products-total:last-of-type {font-weight:700;}
+.order-products div > div 	{padding:5px 10px;}
+.order-products .name 		{width:calc(100% - 510px);}
+.order-products .voucher	{width:calc(100% - 300px);}
+.order-products .model 		{width:110px;text-align:center;}
+.order-products .quantity 	{width:100px;text-align:center;}
+.order-products .price 		{width:150px;text-align:right;}
+.order-products .total 		{width:150px;text-align:right;}
+.order-products-total .title {width:calc(100% - 150px);text-align:right;}
+.order-products-total .total {width:150px;text-align:right;}
+.order-comment {width:100%;margin-bottom:25px;}
+.order-history {width:100%;margin-bottom:25px;}
+#order-history-header {width:100%;margin-bottom:25px;padding:0px;}
+#order-history-legend {width:100%;display:flex;justify-content:flex-start;align-items:center;background:rgba(0,167,146,1);color:#fff;}
+#order-history-legend > div {text-align:center;}
+.order-history-list {width:100%;display:flex;justify-content:flex-start;align-items:center;}
+.order-history-list:nth-of-type(2n) {background:rgba(0,167,146,0.1);}
+.order-history div > div 	{padding:5px 10px;}
+.order-history .date 	{width:100px;}
+.order-history .status 	{width:200px;text-align:center;}
+.order-history .comment	{width:calc(100% - 300px);}
+/* end of Order Info */
+
+/* REWARDS */
+.rewards-body {width:100%;margin-bottom:25px;}
+#rewards-header {width:100%;margin-bottom:25px;padding:0px;}
+#rewards-legend {width:100%;display:flex;justify-content:flex-start;align-items:center;background:rgba(0,167,146,1);color:#fff;}
+.rewards-list {width:100%;display:flex;justify-content:flex-start;align-items:center;}
+.rewards-list:nth-of-type(2n) {background:rgba(0,167,146,0.1);}
+.rewards-body div > div {padding:5px 10px;}
+.rewards-body .date 	{width:100px;}
+.rewards-body .order 	{width:200px;}
+.rewards-body .order a {text-decoration:underline;}
+.rewards-body .points 	{width:calc(100% - 300px);}
+/* end of Rewards */
+
+/* PASSWORD */
+#reset-password-header {width:100%;margin-bottom:25px;padding:0px;}
+.reset-password {width:100%;}
+.reset-password-box {width:100%;margin-bottom:6px;display:flex;justify-content:flex-start;align-items:center;}
+.reset-password .name {width:30%;padding:10px;text-align:right;}
+.reset-password .name .required {color:#f00;}
+.reset-password .pass {width:70%;}
+.reset-password .pass input {width:100%;padding:10px 20px;border:1px solid rgb(133, 133, 133);border-radius:2px;}
+.reset-password .pass .error {color:#f00;}
+/* end of Password */
+
+@media (min-width: 320px) and (max-width: 575px) {
+	#order-products-legend {display:none;}
+	.order-products-list {padding:10px 0px;}
+	.order-products div 		{flex-wrap:wrap;}
+	.order-products .name 		{width:100%;}
+	.order-products .voucher	{width:100%;}
+	.order-products .model 		{width:90px;}
+	.order-products .quantity 	{width:50px;}
+	.order-products .price 		{display:none;}
+	.order-products .total 		{width:calc(100% - 140px);}
+	.order-products-voucher .total {width:100%;}
+	.order-products-total .total {width:150px;}
+	#order-history-legend  {display:none;}
+	.order-history div  	{flex-wrap:wrap;}
+	.order-history .date 	{width:90px;}
+	.order-history .status 	{width:160px;text-align:center;}
+	.order-history .comment	{width:100%;}
+	#rewards-legend {display:none;}
+	.rewards-body div {flex-wrap:wrap;}
+	.rewards-body .date 	{width:90px;}
+	.rewards-body .order 	{width:calc(100% - 90px);}
+	.rewards-body .points 	{width:100%;text-align:right;}
+	.reset-password-box {flex-wrap:wrap;}
+	.reset-password .name {width:100%;text-align:left;padding-left:0px;}
+	.reset-password .pass {width:100%;}
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+	#order-products-legend {display:none;}
+	.order-products-list {padding:10px 0px;}
+	.order-products div 		{flex-wrap:wrap;}
+	.order-products .name 		{width:100%;}
+	.order-products .voucher	{width:100%;}
+	.order-products .model 		{width:90px;}
+	.order-products .quantity 	{width:50px;}
+	.order-products .price 		{display:none;}
+	.order-products .total 		{width:calc(100% - 140px);}
+	.order-products-voucher .total {width:100%;}
+	.order-products-total .total {width:150px;}
+	#order-history-legend  {display:none;}
+	.order-history div  	{flex-wrap:wrap;}
+	.order-history .date 	{width:90px;}
+	.order-history .status 	{width:160px;text-align:center;}
+	.order-history .comment	{width:100%;}
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	.order-products-list {padding:10px 0px;}
+	.order-products div 		{flex-wrap:wrap;}
+	.order-products .name 		{width:calc(100% - 290px);}
+	.order-products .voucher	{width:calc(100% - 150px);}
+	.order-products .model 		{width:90px;}
+	.order-products .quantity 	{width:50px;}
+	.order-products .price 		{display:none;}
+	.order-products .total 		{width:150px;}
+}
+/* end of Account Pages ************************************************************************************************************************** */
+/* VOUCHER *************************************************************************************************************************************** */
+.voucher-form {}
+.voucher-form > div {margin-bottom:25px;}
+.voucher-form > div label {width:100%;padding-right:10px;}
+.voucher-form > div input {width:100%;padding:10px 20px;border:1px solid rgb(133, 133, 133);border-radius:2px;}
+.voucher-form > div textarea {width:100%;padding:20px 20px;border:1px solid rgb(133, 133, 133);border-radius:2px;}
+.voucher-form .to-name {}
+.voucher-form .to-mail {}
+.voucher-form .from-name {}
+.voucher-form .from-mail {}
+.voucher-form .voucher-info {width:100%;display:flex;}
+.voucher-form .voucher-info .voucher-message {width:100%;}
+.voucher-form .voucher-info .voucher-theme {width:100%;}
+.voucher-form .voucher-info .voucher-theme-box {margin-left:25px;}
+.voucher-form .voucher-info .voucher-theme-box label {width:200px;}
+.voucher-form .voucher-info .voucher-theme-box input {width:25px;}
+.voucher-form .voucher-amount input {width:150px;}
+@media (max-width: 767px) {
+	.voucher-form .voucher-info {flex-wrap:wrap;}
+	.voucher-form .voucher-info .voucher-theme {margin-top:25px;}
+}
+@media (min-width: 768px) {
+	.voucher-form .voucher-info .voucher-message {width:calc(100% - 260px - 25px);}
+	.voucher-form .voucher-info .voucher-theme {width:260px;margin-left:25px;}
+}
+/* end of Voucher ******************************************************************************************************************************** */
